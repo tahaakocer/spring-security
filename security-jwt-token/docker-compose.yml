@@ -1,0 +1,13 @@
+version: '3.8'
+services:
+  db:
+    image: mysql
+    restart: always
+    container_name: mysql-jwt-db
+    environment:
+      MYSQL_ROOT_PASSWORD: 123456
+      MYSQL_DATABASE: jwt-db
+      MYSQL_USER: mysql
+      MYSQL_PASSWORD: 123456
+    ports:
+      - '3307:3306'
